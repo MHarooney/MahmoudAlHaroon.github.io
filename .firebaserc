@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mahmoud-al-haroon-d9c68"
+  },
+  "targets": {
+    "mahmoud-al-haroon-d9c68": {
+      "hosting": {
+        "target-name": [
+          "mahmoud-al-haroon-d9c68.web.app"
+        ]
+      }
+    }
+  }
+}

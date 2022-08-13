@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="This is my portfolio.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mahmoud Al-Haroon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+<!--  <link rel="shortcut icon" href="my-logo.png" type="image/png">-->
+  <link rel="icon" href="my-logo.png" type="image/png">
+
+  <title>Mahmoud Al-Haroon</title>
+  <link rel="manifest" href="manifest.json">
+  <!--  <style>-->
+  <!--    .lds-ripple {-->
+  <!--      display: inline-block;-->
+  <!--      position: relative;-->
+  <!--      width: 80px;-->
+  <!--      height: 80px;-->
+  <!--    }-->
+
+  <!--    .lds-ripple div {-->
+  <!--      background-color: #e64230;-->
+  <!--      position: absolute;-->
+  <!--      border: 4px solid #fff;-->
+  <!--      opacity: 1;-->
+  <!--      border-radius: 50%;-->
+  <!--      animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;-->
+  <!--    }-->
+
+  <!--    .lds-ripple div:nth-child(2) {-->
+  <!--      animation-delay: -0.5s;-->
+  <!--    }-->
+
+  <!--    @keyframes lds-ripple {-->
+  <!--      0% {-->
+  <!--        top: 36px;-->
+  <!--        left: 36px;-->
+  <!--        width: 0;-->
+  <!--        height: 0;-->
+  <!--        opacity: 1;-->
+  <!--      }-->
+
+  <!--      100% {-->
+  <!--        top: 0px;-->
+  <!--        left: 0px;-->
+  <!--        width: 72px;-->
+  <!--        height: 72px;-->
+  <!--        opacity: 0;-->
+  <!--      }-->
+  <!--    }-->
+
+  <!--    .container {-->
+  <!--      height: 100%;-->
+  <!--    }-->
+
+  <!--    .center {-->
+  <!--      margin: 0;-->
+  <!--      position: absolute;-->
+  <!--      top: 50%;-->
+  <!--      left: 50%;-->
+  <!--      -ms-transform: translate(-50%, -50%);-->
+  <!--      transform: translate(-50%, -50%);-->
+  <!--    }-->
+  <!--  </style>-->
+  <!--</head>-->
+  <!--<body>-->
+
+  <!--&lt;!&ndash; The core Firebase JS SDK is always required and must be listed first &ndash;&gt;-->
+  <!--<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>-->
+
+  <!--&lt;!&ndash; TODO: Add SDKs for Firebase products that you want to use-->
+  <!--     https://firebase.google.com/docs/web/setup#available-libraries &ndash;&gt;-->
+  <!--<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>-->
+  <!--<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>-->
+
+  <!--<script type="module">-->
+  <!--  // Import the functions you need from the SDKs you need-->
+  <!--  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";-->
+  <!--  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";-->
+  <!--  // TODO: Add SDKs for Firebase products that you want to use-->
+  <!--  // https://firebase.google.com/docs/web/setup#available-libraries-->
+
+  <!--  // Your web app's Firebase configuration-->
+  <!--  // For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
+  <!--  const firebaseConfig = {-->
+<!--  apiKey: "AIzaSyAAf89oaK2Gj-Enhvldf3Gn15Xv-IDqZnU",-->
+<!--  authDomain: "mahmoud-al-haroon-d9c68.firebaseapp.com",-->
+<!--  projectId: "mahmoud-al-haroon-d9c68",-->
+<!--  storageBucket: "mahmoud-al-haroon-d9c68.appspot.com",-->
+<!--  messagingSenderId: "358253910894",-->
+<!--  appId: "1:358253910894:web:ceedda3f428f5f20ef3f7f",-->
+<!--  measurementId: "G-JY1TW7QFMS"-->
+  <!--  };-->
+
+  <!--  // Initialize Firebase-->
+  <!--  const app = initializeApp(firebaseConfig);-->
+  <!--  const analytics = getAnalytics(app);-->
+  <!--</script>-->
+  <!--  &lt;!&ndash; This script installs service_worker.js to provide PWA functionality to-->
+  <!--       application. For more information, see:-->
+  <!--       https://developers.google.com/web/fundamentals/primers/service-workers &ndash;&gt;-->
+  <!--  <script>-->
+  <!--    var serviceWorkerVersion = null;-->
+  <!--    var scriptLoaded = false;-->
+  <!--    function loadMainDartJs() {-->
+  <!--      if (scriptLoaded) {-->
+  <!--        return;-->
+  <!--      }-->
+  <!--      scriptLoaded = true;-->
+  <!--      var scriptTag = document.createElement('script');-->
+  <!--      scriptTag.src = 'main.dart.js';-->
+  <!--      scriptTag.type = 'application/javascript';-->
+  <!--      document.body.append(scriptTag);-->
+  <!--    }-->
+
+  <!--    if ('serviceWorker' in navigator) {-->
+  <!--      // Service workers are supported. Use them.-->
+  <!--      window.addEventListener('load', function () {-->
+  <!--        // Wait for registration to finish before dropping the <script> tag.-->
+  <!--        // Otherwise, the browser will load the script multiple times,-->
+  <!--        // potentially different versions.-->
+  <!--        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;-->
+  <!--        navigator.serviceWorker.register(serviceWorkerUrl)-->
+  <!--          .then((reg) => {-->
+  <!--            function waitForActivation(serviceWorker) {-->
+  <!--              serviceWorker.addEventListener('statechange', () => {-->
+  <!--                if (serviceWorker.state == 'activated') {-->
+  <!--                  console.log('Installed new service worker.');-->
+  <!--                  loadMainDartJs();-->
+  <!--                }-->
+  <!--              });-->
+  <!--            }-->
+  <!--            if (!reg.active && (reg.installing || reg.waiting)) {-->
+  <!--              // No active web worker and we have installed or are installing-->
+  <!--              // one for the first time. Simply wait for it to activate.-->
+  <!--              waitForActivation(reg.installing ?? reg.waiting);-->
+  <!--            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {-->
+  <!--              // When the app updates the serviceWorkerVersion changes, so we-->
+  <!--              // need to ask the service worker to update.-->
+  <!--              console.log('New service worker available.');-->
+  <!--              reg.update();-->
+  <!--              waitForActivation(reg.installing);-->
+  <!--            } else {-->
+  <!--              // Existing service worker is still good.-->
+  <!--              console.log('Loading app from service worker.');-->
+  <!--              loadMainDartJs();-->
+  <!--            }-->
+  <!--          });-->
+
+  <!--        // If service worker doesn't succeed in a reasonable amount of time,-->
+  <!--        // fallback to plaint <script> tag.-->
+  <!--        setTimeout(() => {-->
+  <!--          if (!scriptLoaded) {-->
+  <!--            console.warn(-->
+  <!--              'Failed to load app from service worker. Falling back to plain <script> tag.',-->
+  <!--            );-->
+  <!--            loadMainDartJs();-->
+  <!--          }-->
+  <!--        }, 4000);-->
+  <!--      });-->
+  <!--    } else {-->
+  <!--      // Service workers not supported. Just drop the <script> tag.-->
+  <!--      loadMainDartJs();-->
+  <!--    }-->
+  <!--  </script>-->
+  <!--</body>-->
+
+  <style>
+/* CSS for animated bouncing loader. */
+.loader {
+  display: flex;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+/* Loader circles */
+.loader > span {
+  background: #FFC107;
+  border-radius: 50%;
+  margin: 5rem 0.5rem;
+  animation: bouncingLoader 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Define the animation called bouncingLoader. */
+@keyframes bouncingLoader {
+  from {
+    width: 0.1rem;
+    height: 0.1rem;
+    opacity: 1;
+    transform: translate3d(0);
+  }
+  to {
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.1;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+
+/* OPTIONAL: Styles for the demo. */
+body {
+  background: #191923;
+  padding: 2rem;
+}
+
+p {
+  font: 1rem/1.45 "Operator Mono";
+  color: #FFC107;
+  text-align: center;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+<p>Welcome to Mahmoud Al-Haroon portfolio, thanks for visit &#128516;, still under-construction</p>
+
+<div class="loader">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAAf89oaK2Gj-Enhvldf3Gn15Xv-IDqZnU",
+    authDomain: "mahmoud-al-haroon-d9c68.firebaseapp.com",
+    projectId: "mahmoud-al-haroon-d9c68",
+    storageBucket: "mahmoud-al-haroon-d9c68.appspot.com",
+    messagingSenderId: "358253910894",
+    appId: "1:358253910894:web:ceedda3f428f5f20ef3f7f",
+    measurementId: "G-JY1TW7QFMS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
