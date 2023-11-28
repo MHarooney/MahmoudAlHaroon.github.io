@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class OnHover extends StatefulWidget {
-  final Widget Function(bool isHovered) builder;
+  final Widget Function(bool isHovered)? builder;
 
-  const OnHover({Key key, this.builder}) : super(key: key);
+  const OnHover({Key? key, this.builder}) : super(key: key);
 
   @override
   _OnHoverState createState() => _OnHoverState();
@@ -22,7 +22,7 @@ class _OnHoverState extends State<OnHover> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
         transform: transform,
-        child: widget.builder(isHovered),
+        child: widget.builder!(isHovered),
       ),
     );
   }

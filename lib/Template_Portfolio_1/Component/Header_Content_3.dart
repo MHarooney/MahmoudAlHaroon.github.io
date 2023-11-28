@@ -1,12 +1,12 @@
 import 'dart:html';
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:malharoon/Carousel/CarouselPro.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polygon/flutter_polygon.dart';
 import 'package:malharoon/Helper/QubicleColor.dart';
 
 class HeaderContent3 extends StatelessWidget {
-  HeaderContent3({Key key}) : super(key: key);
+  HeaderContent3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -144,7 +144,7 @@ class DesktopHeaderContent3 extends StatelessWidget {
                               "\n \u2022 Act as a product champion externally and internally in support of sales channels."
                               "\n \u2022 Track and report key metrics to drive future product developments.",
                           "Innovito",
-                          "December 2022"),
+                          "April 2022"),
                       _worked(
                           "\u2022 Responsible for solving and debugging issues in both Flutter and Android.\n "
                               "\u2022 Responsible for adding new features in Flutter and Android.",
@@ -200,7 +200,10 @@ class DesktopHeaderContent3 extends StatelessWidget {
                     autoplay: false,
                     dotHorizontalPadding: 340.0,
                     dotBgColor: Colors.transparent,
-                    borderRadius: true,
+                    borderRadius: true, radius: Radius.circular(0.0),
+                      overlayShadowColors: Colors.transparent,
+                      onImageTap: (int ) {  },
+                      onImageChange: (int , ints ) {  },
                   )),
             ),
           ],
@@ -332,7 +335,10 @@ class MobileHeaderContent3 extends StatelessWidget {
                     autoplay: false,
                     dotHorizontalPadding: 340.0,
                     dotBgColor: Colors.transparent,
-                    borderRadius: true,
+                    borderRadius: true, radius: Radius.circular(0.0),
+                      overlayShadowColors: Colors.transparent,
+                      onImageTap: (int ) {  },
+                      onImageChange: (int , ints ) {  },
                   )),
             ),
           ],

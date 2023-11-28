@@ -2,7 +2,7 @@ import 'dart:html';
 
 import 'package:favicon/favicon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_scrollbar/flutter_web_scrollbar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:malharoon/Helper/QubicleColor.dart';
 
@@ -14,7 +14,7 @@ import 'Component/Header_Content_5.dart';
 import 'Component/Navbar_Portfolio_1.dart';
 
 class PortfolioScreen1 extends StatefulWidget {
-  PortfolioScreen1({Key key}) : super(key: key);
+  PortfolioScreen1({Key? key}) : super(key: key);
 
   @override
   _PortfolioScreen1State createState() => _PortfolioScreen1State();
@@ -40,7 +40,7 @@ class _PortfolioScreen1State extends State<PortfolioScreen1> {
 }
 
 class DekstopPortfolioScreen1 extends StatefulWidget {
-  DekstopPortfolioScreen1({Key key}) : super(key: key);
+  DekstopPortfolioScreen1({Key? key}) : super(key: key);
 
   @override
   _DekstopPortfolioScreen1State createState() =>
@@ -48,7 +48,7 @@ class DekstopPortfolioScreen1 extends StatefulWidget {
 }
 
 class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
-  ScrollController _controller;
+  ScrollController? _controller;
   double pixels = 0.0;
   var dataKey = new GlobalKey();
   final dataKey2 = new GlobalKey();
@@ -60,9 +60,9 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
-    _controller.addListener(() {
+    _controller?.addListener(() {
       setState(() {
-        pixels = _controller.position.pixels;
+        pixels = _controller!.position.pixels;
         print(pixels);
       });
     });
@@ -72,7 +72,7 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller?.dispose();
     // TODO: implement dispose
     super.dispose();
   }
@@ -80,7 +80,7 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
   void scrollCallBack(DragUpdateDetails dragUpdate) {
     setState(() {
       // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
+      _controller!.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
     });
   }
 
@@ -97,7 +97,7 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
 
   _launchURL() async {
     final url = Uri.encodeFull(
-        'mailto:mahmoud.harooney.tooling@gmail.com?subject=News&body=New plugin');
+        'mailto:mahmoud.harooney.tooling@gmail.com?subject=Hello Mahmoud&body=Hello Mahmoud');
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -114,8 +114,8 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
     }
   }
 
-  _launchInstagram() async {
-    final url = "https://www.instagram.com/";
+  _launchFacebook() async {
+    final url = "https://www.facebook.com/mahmoud.harooney";
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -142,7 +142,7 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
   }
 
   _launchCode() async {
-    final url = "https://stackoverflow.com/users/12089796/mahmoud-harooney";
+    final url = "https://stackoverflow.com/users/6317695/mahmoud-al-haroon";
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -296,7 +296,7 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
                               ),
                               InkWell(
                                 onTap: () {
-                                  _launchGitHub();
+                                  _launchFacebook();
                                 },
                                 child: MouseRegion(
                                   onEnter: (values) {
@@ -309,9 +309,9 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
                                       color3 = notSelected3;
                                     });
                                   },
-                                  child: Image.asset(
-                                    "assets/template1/twitter.png",
-                                    height: 20.1,
+                                  child: FaIcon(
+                                    FontAwesomeIcons.facebook,
+                                    size: 20.0,
                                     color: color3,
                                   ),
                                 ),
@@ -430,18 +430,6 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
               ),
             ),
           ),
-          FlutterWebScroller(
-            //Pass a reference to the ScrollCallBack function into the scrollbar
-            scrollCallBack,
-
-            //Add optional values
-            scrollBarBackgroundColor: Colors.transparent,
-            scrollBarWidth: 30.0,
-            dragHandleColor: Colors.black26,
-            dragHandleBorderRadius: 2.0,
-            dragHandleHeight: 30.0,
-            dragHandleWidth: 10.0,
-          ),
         ],
       ),
     );
@@ -449,14 +437,14 @@ class _DekstopPortfolioScreen1State extends State<DekstopPortfolioScreen1> {
 }
 
 class MobilePortfolioScreen1 extends StatefulWidget {
-  MobilePortfolioScreen1({Key key}) : super(key: key);
+  MobilePortfolioScreen1({Key? key}) : super(key: key);
 
   @override
   _MobilePortfolioScreen1State createState() => _MobilePortfolioScreen1State();
 }
 
 class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
-  ScrollController _controller;
+  ScrollController? _controller;
   double pixels2 = 0.0;
   var dataKey = new GlobalKey();
   final dataKey2 = new GlobalKey();
@@ -468,9 +456,9 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
   void initState() {
     //Initialize the  scrollController
     _controller = ScrollController();
-    _controller.addListener(() {
+    _controller?.addListener(() {
       setState(() {
-        pixels2 = _controller.position.pixels;
+        pixels2 = _controller!.position.pixels;
         print(pixels2);
       });
     });
@@ -480,7 +468,7 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller?.dispose();
     // TODO: implement dispose
     super.dispose();
   }
@@ -488,7 +476,7 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
   void scrollCallBack(DragUpdateDetails dragUpdate) {
     setState(() {
       // Note: 3.5 represents the theoretical height of all my scrollable content. This number will vary for you.
-      _controller.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
+      _controller?.position.moveTo(dragUpdate.globalPosition.dy * 3.5);
     });
   }
 
@@ -505,7 +493,7 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
 
   _launchURL() async {
     final url = Uri.encodeFull(
-        'mailto:mahmoud.harooney.tooling@gmail.com?subject=News&body=New plugin');
+        'mailto:mahmoud.harooney.tooling@gmail.com?subject=Your Subject&body=Hello Mahmoud');
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -550,7 +538,7 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
   }
 
   _launchCode() async {
-    final url = "https://stackoverflow.com/users/12089796/mahmoud-harooney";
+    final url = "https://stackoverflow.com/users/6317695/mahmoud-al-haroon";
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -660,56 +648,6 @@ class _MobilePortfolioScreen1State extends State<MobilePortfolioScreen1> {
                         ),
                       ),
                     ),
-                    // SizedBox(
-                    //   height: 33.0,
-                    // ),
-                    // InkWell(
-                    //   onTap: () {
-                    //     _launchInstagram();
-                    //   },
-                    //   child: MouseRegion(
-                    //     onEnter: (values) {
-                    //       setState(() {
-                    //         color2 = selected2;
-                    //       });
-                    //     },
-                    //     onExit: (values) {
-                    //       setState(() {
-                    //         color2 = notSelected2;
-                    //       });
-                    //     },
-                    //     child: Image.asset(
-                    //       "assets/template1/instagram.png",
-                    //       height: 17.1,
-                    //       color: color2,
-                    //     ),
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: 33.0,
-                    // ),
-                    // InkWell(
-                    //   onTap: () {
-                    //     _launchTwitter();
-                    //   },
-                    //   child: MouseRegion(
-                    //     onEnter: (values) {
-                    //       setState(() {
-                    //         color3 = selected3;
-                    //       });
-                    //     },
-                    //     onExit: (values) {
-                    //       setState(() {
-                    //         color3 = notSelected3;
-                    //       });
-                    //     },
-                    //     child: Image.asset(
-                    //       "assets/template1/twitter.png",
-                    //       height: 17.1,
-                    //       color: color3,
-                    //     ),
-                    //   ),
-                    // ),
                     SizedBox(
                       height: 33.0,
                     ),

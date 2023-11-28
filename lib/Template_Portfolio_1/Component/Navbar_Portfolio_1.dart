@@ -6,11 +6,11 @@ import 'package:malharoon/Helper/QubicleColor.dart';
 
 class NavbarT1 extends StatelessWidget {
   NavbarT1(
-      {this.dataKey,
-      this.dataKey2,
-      this.dataKey3,
-      this.dataKey4,
-      this.dataKey5});
+      {required this.dataKey,
+        required this.dataKey2,
+        required this.dataKey3,
+        required this.dataKey4,
+        required this.dataKey5});
   var dataKey = new GlobalKey();
   var dataKey2 = new GlobalKey();
   var dataKey3 = new GlobalKey();
@@ -57,12 +57,12 @@ class DesktopNavbarT1 extends StatefulWidget {
   var dataKey4 = new GlobalKey();
   var dataKey5 = new GlobalKey();
   DesktopNavbarT1(
-      {Key key,
-      this.dataKey,
-      this.dataKey2,
-      this.dataKey3,
-      this.dataKey4,
-      this.dataKey5})
+      {Key? key,
+        required this.dataKey,
+        required this.dataKey2,
+        required this.dataKey3,
+        required this.dataKey4,
+        required this.dataKey5})
       : super(key: key);
 
   @override
@@ -104,7 +104,7 @@ class _DesktopNavbarT1State extends State<DesktopNavbarT1> {
               children: <Widget>[
                 InkWell(
                   onTap: () {
-                    Scrollable.ensureVisible(widget.dataKey.currentContext);
+                    Scrollable.ensureVisible(widget.dataKey.currentContext!);
                   },
                   child: MouseRegion(
                     onEnter: (values) {
@@ -150,7 +150,7 @@ class _DesktopNavbarT1State extends State<DesktopNavbarT1> {
                 ),
                 InkWell(
                   onTap: () {
-                    Scrollable.ensureVisible(widget.dataKey2.currentContext);
+                    Scrollable.ensureVisible(widget.dataKey2.currentContext!);
                   },
                   child: MouseRegion(
                     onEnter: (value2) {
@@ -209,7 +209,7 @@ class _DesktopNavbarT1State extends State<DesktopNavbarT1> {
                   },
                   child: InkWell(
                     onTap: () {
-                      Scrollable.ensureVisible(widget.dataKey3.currentContext);
+                      Scrollable.ensureVisible(widget.dataKey3.currentContext!);
                     },
                     child: Row(
                       children: [
@@ -255,7 +255,7 @@ class _DesktopNavbarT1State extends State<DesktopNavbarT1> {
                   },
                   child: InkWell(
                     onTap: () {
-                      Scrollable.ensureVisible(widget.dataKey4.currentContext);
+                      Scrollable.ensureVisible(widget.dataKey4.currentContext!);
                     },
                     child: Row(
                       children: [
@@ -292,7 +292,7 @@ class _DesktopNavbarT1State extends State<DesktopNavbarT1> {
                     child: InkWell(
                       onTap: () {
                         Scrollable.ensureVisible(
-                            widget.dataKey5.currentContext);
+                            widget.dataKey5.currentContext!);
                       },
                       child: Container(
                         height: 41.0,
@@ -335,12 +335,12 @@ class MobileNavbarT1 extends StatefulWidget {
   var dataKey4 = new GlobalKey();
   var dataKey5 = new GlobalKey();
   MobileNavbarT1(
-      {Key key,
-      this.dataKey,
-      this.dataKey2,
-      this.dataKey3,
-      this.dataKey4,
-      this.dataKey5})
+      {Key? key,
+        required this.dataKey,
+        required this.dataKey2,
+        required this.dataKey3,
+        required this.dataKey4,
+        required this.dataKey5})
       : super(key: key);
 
   @override
@@ -392,7 +392,7 @@ class _MobileNavbarT1State extends State<MobileNavbarT1> {
                         splashColor: Colors.white60,
                         onTap: () {
                           Scrollable.ensureVisible(
-                              widget.dataKey.currentContext);
+                              widget.dataKey.currentContext!);
                         },
                         child: Container(
                           height: 50.0,
@@ -430,7 +430,7 @@ class _MobileNavbarT1State extends State<MobileNavbarT1> {
                         splashColor: Colors.white60,
                         onTap: () {
                           Scrollable.ensureVisible(
-                              widget.dataKey2.currentContext);
+                              widget.dataKey2.currentContext!);
                         },
                         child: Container(
                           height: 50.0,
@@ -468,7 +468,7 @@ class _MobileNavbarT1State extends State<MobileNavbarT1> {
                         splashColor: Colors.white60,
                         onTap: () {
                           Scrollable.ensureVisible(
-                              widget.dataKey3.currentContext);
+                              widget.dataKey3.currentContext!);
                         },
                         child: Container(
                           height: 50.0,
@@ -506,7 +506,7 @@ class _MobileNavbarT1State extends State<MobileNavbarT1> {
                         splashColor: Colors.white60,
                         onTap: () {
                           Scrollable.ensureVisible(
-                              widget.dataKey4.currentContext);
+                              widget.dataKey4.currentContext!);
                         },
                         child: Container(
                           height: 50.0,
@@ -614,7 +614,7 @@ List<Widget> navBarItems = [
 ];
 
 class NavBarItem extends StatefulWidget {
-  final String text;
+  final String? text;
 
   NavBarItem({
     this.text,
@@ -653,7 +653,7 @@ class _NavBarItemState extends State<NavBarItem> {
             alignment: Alignment.centerLeft,
             margin: EdgeInsets.symmetric(horizontal: 14.0),
             child: Text(
-              widget.text,
+              widget.text??"",
               style: TextStyle(
                 fontFamily: "Sofia",
                 fontWeight: fontWeight,
@@ -669,7 +669,7 @@ class _NavBarItemState extends State<NavBarItem> {
 }
 
 class NavBarButton extends StatefulWidget {
-  final Function onPressed;
+  final Function? onPressed;
 
   NavBarButton({
     this.onPressed,
@@ -700,7 +700,7 @@ class _NavBarButtonState extends State<NavBarButton> {
           splashColor: QubicleColors.secondColorP1,
           onTap: () {
             setState(() {
-              widget.onPressed();
+              widget.onPressed!();
             });
           },
           child: Icon(

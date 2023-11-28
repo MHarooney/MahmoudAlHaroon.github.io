@@ -1,5 +1,4 @@
 import 'dart:html';
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polygon/flutter_polygon.dart';
@@ -8,7 +7,7 @@ import 'package:malharoon/Helper/OnHover.dart';
 import 'package:malharoon/Helper/QubicleColor.dart';
 
 class HeaderContent5 extends StatelessWidget {
-  HeaderContent5({Key key}) : super(key: key);
+  HeaderContent5({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -30,7 +29,7 @@ class DesktopHeaderContent5 extends StatelessWidget {
   Widget build(BuildContext context) {
     _launchURL() async {
       final url = Uri.encodeFull(
-          'mailto:mahmoud.harooney.tooling@gmail.com?subject=News&body=New plugin');
+          'mailto:mahmoud.harooney.tooling@gmail.com?subject=Your Subject&body=Hello Mahmoud');
       if (await canLaunch(url)) {
         await launch(url);
       } else {
@@ -133,7 +132,7 @@ class MobileHeaderContent5 extends StatelessWidget {
   Widget build(BuildContext context) {
     _launchURL() async {
       final url = Uri.encodeFull(
-          'mailto:mahmoud.harooney.tooling@gmail.com?subject=News&body=New plugin');
+          'mailto:mahmoud.harooney.tooling@gmail.com?subject=Your Subject&body=Hello Mahmoud');
       if (await canLaunch(url)) {
         await launch(url);
       } else {

@@ -8,7 +8,7 @@ import 'package:malharoon/Helper/QubicleColor.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HeaderContent1 extends StatelessWidget {
-  HeaderContent1({Key key}) : super(key: key);
+  HeaderContent1({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -60,7 +60,7 @@ class DesktopHeaderContent1 extends StatelessWidget {
               child: Container(
                 width: 600.0,
                 child: Text(
-                  "I'm software engineer specializing in building and designing end-end projects. Currently. I have worked on more than 10 different projects in POS, Retail, Onlinebanking, E-Commerce, Radio network projects, and currently I am working as a Product Manager in Innovito since 2022 working on LMS projects with multiple customers I am working on Learning Management System (LMS) projects.",
+                  "10 years of experience in the Software Engineering Industry including 2 years of Software Project Management. I worked on more than 10 different projects in different countries (on-site and remote) for POS, Retail, Online-banking, E-Commerce and Mobile Radio network solutions. I manage a team of software developers (Full Stack Developer, Mobile Developer, Testers and DevOps). I am responsible for the company technical team, customer communications and solution delivery working on ELearning Management System.",
                   style: TextStyle(
                       fontFamily: "Sofia",
                       fontSize: 17.0,
@@ -106,7 +106,7 @@ class DesktopHeaderContent1 extends StatelessWidget {
                       child: Center(
                         child: TextButton(
                           onPressed: () {html.window.open(
-                              'https://drive.google.com/file/d/1O9Ncg0OhaUZ2yCOak2Qotg8GlucgeBy3/view?usp=sharing',
+                              'https://drive.google.com/file/d/1Kc_rq7Cb6HfyVlC199f48XuAXx1lEDNI/view?usp=sharing',
                               "pdf");},
                           child: FittedBox(
                             child: Row(
@@ -172,7 +172,7 @@ class MobileHeaderContent1 extends StatelessWidget {
               child: Container(
                 width: 600.0,
                 child: Text(
-                  "I'm software engineer specializing in building and designing end-end projects. Currently. I have worked on more than 10 different projects in POS, Retail, Onlinebanking, E-Commerce, Radio network projects, and currently I am working as a Product Manager in Innovito since 2022 working on LMS projects with multiple customers I am working on Learning Management System (LMS) projects.",
+                  "10 years of experience in the Software Engineering Industry including 2 years of Software Project Management. I worked on more than 10 different projects in different countries (on-site and remote) for POS, Retail, Online-banking, E-Commerce and Mobile Radio network solutions. I manage a team of software developers (Full Stack Developer, Mobile Developer, Testers and DevOps). I am responsible for the company technical team, customer communications and solution delivery working on ELearning Management System.",
                   style: TextStyle(
                       fontFamily: "Sofia",
                       fontSize: 16.0,
@@ -218,7 +218,7 @@ class MobileHeaderContent1 extends StatelessWidget {
                       child: Center(
                         child: TextButton(
                           onPressed: () {html.window.open(
-                              'https://drive.google.com/file/d/1O9Ncg0OhaUZ2yCOak2Qotg8GlucgeBy3/view?usp=sharing',
+                              'https://drive.google.com/file/d/1Kc_rq7Cb6HfyVlC199f48XuAXx1lEDNI/view?usp=sharing',
                               "pdf");},
                           child: FittedBox(
                             child: Row(

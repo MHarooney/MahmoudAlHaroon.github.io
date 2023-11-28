@@ -1,15 +1,16 @@
 import 'dart:html';
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polygon/flutter_polygon.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:malharoon/Helper/OnHover.dart';
 import 'package:malharoon/Helper/QubicleColor.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
 
 class HeaderContent4 extends StatelessWidget {
   double pixels;
-  HeaderContent4({Key key, this.pixels}) : super(key: key);
+  HeaderContent4({Key? key, required this.pixels}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -643,7 +644,7 @@ Widget _portoRight(String desc, title, code, link, image) {
 
 class DesktopHeaderContent4 extends StatelessWidget {
   double pixels;
-  DesktopHeaderContent4({this.pixels});
+  DesktopHeaderContent4({required this.pixels});
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -813,7 +814,7 @@ class DesktopHeaderContent4 extends StatelessWidget {
 
 class MobileHeaderContent4 extends StatelessWidget {
   double pixels;
-  MobileHeaderContent4({this.pixels});
+  MobileHeaderContent4({required this.pixels});
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;

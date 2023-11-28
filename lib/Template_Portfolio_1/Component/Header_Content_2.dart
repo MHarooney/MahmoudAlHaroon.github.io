@@ -8,7 +8,7 @@ import 'package:malharoon/Helper/OnHover.dart';
 import 'package:malharoon/Helper/QubicleColor.dart';
 
 class HeaderContent2 extends StatelessWidget {
-  HeaderContent2({Key key}) : super(key: key);
+  HeaderContent2({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -27,9 +27,9 @@ class HeaderContent2 extends StatelessWidget {
 
 class DesktopHeaderContent2 extends StatelessWidget {
   @override
-  double top;
-  double left;
-  double factor;
+  late double top;
+  late double left;
+  late double factor;
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
@@ -184,7 +184,7 @@ class DesktopHeaderContent2 extends StatelessWidget {
                                         wordSpacing: 2.0,
                                         height: 1.5,
                                         color: QubicleColors.fontColorGray),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -367,7 +367,7 @@ class DesktopHeaderContent2 extends StatelessWidget {
                                         wordSpacing: 2.0,
                                         height: 1.5,
                                         color: QubicleColors.fontColorGray),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
