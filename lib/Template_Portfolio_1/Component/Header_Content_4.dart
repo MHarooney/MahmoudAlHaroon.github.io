@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polygon/flutter_polygon.dart';
@@ -99,7 +100,7 @@ Widget _portoLeft(String desc, title, code, link, image) {
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 10.0, right: 10.0, top: 6.0, bottom: 6.0),
-                child: Text(
+                child: AutoSizeText(
                   desc,
                   style: TextStyle(
                       fontFamily: "Sofia",
@@ -109,6 +110,10 @@ Widget _portoLeft(String desc, title, code, link, image) {
                       height: 1.5,
                       color: QubicleColors.fontColorGray),
                   textAlign: TextAlign.end,
+                  maxLines: 10,
+                  overflow: TextOverflow.ellipsis,
+                  minFontSize: 10.0,
+                  stepGranularity: 1.0,
                 ),
               ),
             ),
@@ -253,7 +258,7 @@ Widget _portoLeftMobile(String desc, title, code, link, image) {
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 10.0, right: 10.0, top: 6.0, bottom: 6.0),
-                child: Text(
+                child: AutoSizeText(
                   desc,
                   style: TextStyle(
                       fontFamily: "Sofia",
@@ -262,6 +267,10 @@ Widget _portoLeftMobile(String desc, title, code, link, image) {
                       wordSpacing: 2.0,
                       height: 1.5,
                       color: QubicleColors.fontColorGray),
+                  maxLines: 10,
+                  overflow: TextOverflow.ellipsis,
+                  minFontSize: 10.0,
+                  stepGranularity: 1.0,
                   textAlign: TextAlign.end,
                 ),
               ),
@@ -409,7 +418,7 @@ Widget _portoRightMobile(String desc, title, code, link, image) {
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 10.0, right: 10.0, top: 6.0, bottom: 6.0),
-                child: Text(
+                child: AutoSizeText(
                   desc,
                   style: TextStyle(
                       fontFamily: "Sofia",
@@ -419,6 +428,10 @@ Widget _portoRightMobile(String desc, title, code, link, image) {
                       height: 1.5,
                       color: QubicleColors.fontColorGray),
                   textAlign: TextAlign.start,
+                  maxLines: 10,
+                  overflow: TextOverflow.ellipsis,
+                  minFontSize: 10.0,
+                  stepGranularity: 1.0,
                 ),
               ),
             ),
@@ -560,7 +573,7 @@ Widget _portoRight(String desc, title, code, link, image) {
               child: Padding(
                 padding: const EdgeInsets.only(
                     left: 10.0, right: 10.0, top: 6.0, bottom: 6.0),
-                child: Text(
+                child: AutoSizeText(
                   desc,
                   style: TextStyle(
                       fontFamily: "Sofia",
@@ -569,6 +582,10 @@ Widget _portoRight(String desc, title, code, link, image) {
                       wordSpacing: 2.0,
                       height: 1.5,
                       color: QubicleColors.fontColorGray),
+                  maxLines: 10,
+                  overflow: TextOverflow.ellipsis,
+                  minFontSize: 10.0,
+                  stepGranularity: 1.0,
                   textAlign: TextAlign.start,
                 ),
               ),
