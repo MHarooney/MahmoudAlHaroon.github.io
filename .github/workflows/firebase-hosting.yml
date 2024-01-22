@@ -18,9 +18,6 @@ jobs:
           channel: 'stable'
           flutter-version: '3.16.8'
 
-      - name: Install Dependencies
-        run: flutter pub get
-
       - name: Build Flutter Web
         run: flutter build web
 
