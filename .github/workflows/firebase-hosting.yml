@@ -16,7 +16,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '2.8.1'  # Adjust the Flutter version as needed
+          flutter-version: '3.16.8'
 
       - name: Install Dependencies
         run: flutter pub get
@@ -26,5 +26,4 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         run: |
-          npm install -g firebase-tools
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+          echo "$FIREBASE_TOKEN" | firebase deploy --token - --only hosting
