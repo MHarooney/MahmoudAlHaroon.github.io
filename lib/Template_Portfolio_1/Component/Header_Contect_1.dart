@@ -106,7 +106,7 @@ class DesktopHeaderContent1 extends StatelessWidget {
                       child: Center(
                         child: TextButton(
                           onPressed: () {html.window.open(
-                              'https://drive.google.com/file/d/1Kc_rq7Cb6HfyVlC199f48XuAXx1lEDNI/view?usp=sharing',
+                              'https://drive.google.com/file/d/1Xr3DSi5lLhWEnylZqreF06qMnHGYRQ27/view?usp=sharing',
                               "pdf");},
                           child: FittedBox(
                             child: Row(
@@ -218,7 +218,7 @@ class MobileHeaderContent1 extends StatelessWidget {
                       child: Center(
                         child: TextButton(
                           onPressed: () {html.window.open(
-                              'https://drive.google.com/file/d/1Kc_rq7Cb6HfyVlC199f48XuAXx1lEDNI/view?usp=sharing',
+                              'https://drive.google.com/file/d/1Xr3DSi5lLhWEnylZqreF06qMnHGYRQ27/view?usp=sharing',
                               "pdf");},
                           child: FittedBox(
                             child: Row(
